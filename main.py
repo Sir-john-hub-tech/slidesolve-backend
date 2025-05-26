@@ -70,3 +70,7 @@ async def generate_questions(text: str = Form(...)):
     )
     questions = response['choices'][0]['message']['content']
     return {"questions": questions}
+    @app.get("/")
+def read_root():
+    return {"message": "Welcome to SlideSolve API! Visit /docs to test endpoints."}
+
