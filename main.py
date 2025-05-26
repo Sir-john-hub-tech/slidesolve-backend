@@ -48,7 +48,7 @@ async def upload_slide(file: UploadFile = File(...)):
 
 @app.post("/generate-questions/")
 async def generate_questions(text: str = Form(...)):
-    prompt = f"Generate 5 study questions from the following text:
+    prompt = f"""Generate 5 study questions from the following text:
 {text}"
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
