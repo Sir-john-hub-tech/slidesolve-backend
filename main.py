@@ -283,16 +283,3 @@ async def get_results(filename: str):
             status_code=500,
             detail=f"Failed to generate results: {str(e)}"
         )
-
-# ====================== REQUIREMENTS.TXT ======================
-"""
-fastapi==0.103.1
-uvicorn==0.23.2
-python-multipart==0.0.6
-pymupdf==1.23.5
-python-pptx==0.6.23
-python-docx==1.1.0
-openai==1.3.6
-sympy==1.12
-python-dotenv==1.0.0
-"""
